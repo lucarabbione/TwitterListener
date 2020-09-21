@@ -87,11 +87,11 @@ class TweetListener(tweepy.streaming.StreamListener):
                 
                 tweets_list = pandas.DataFrame(tweets_list, columns = columns)
                 frame = pyarrow.Table.from_pandas(tweets_list)
-                ahora = str(times.now())
-                ahora = ahora.replace(".", "-")
-                ahora = ahora.replace(":", "-")
-                ahora = ahora.replace(" ", "_")
-                pq.write_table(frame, ('tweets_' + brand + '/') + brand + '_' + sys.argv[5] + "_" + ahora + '.parquet')
+                timenow = str(times.now())
+                timenow = timenow.replace(".", "-")
+                timenow = timenow.replace(":", "-")
+                timenow = timenow.replace(" ", "_")
+                pq.write_table(frame, ('tweets_' + brand + '/') + brand + '_' + sys.argv[5] + "_" + timenow + '.parquet')
                 raise SystemExit
         else:
             pass 
