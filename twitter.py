@@ -162,6 +162,3 @@ if __name__ == '__main__':
         # Turn on the streaming tool
         myStream = tweepy.Stream(auth = auth, listener = TweetListener())
         tweets = myStream.filter(track = [brand], languages = ["en"])
-
-
-#207645434-O6VfXHLDpzMAzW2Dt02aFOTjOK4JK0zbgvVZQsjM akskjEqjQeaHlUQrz4rtKoeOcwRMnbpOIFfRYFJgtsiRL xIOeVsjARHVIIwtdv2nF9mNMJ JaS5ZLSYVrEUlx0MFM6PN2StkFrx52p6GPOoG5Vqk2MxM2IEhu  
