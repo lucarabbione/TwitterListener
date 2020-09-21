@@ -29,7 +29,7 @@ def process_term(term):
       'brand':brand,
       'count':running_totals[brand]
    }
-   es.index(index = 'tech-data-and-the-innovation-mindset', doc_type = 'word_counter',  body = document) 
+   es.index(index = 'test-ETL', doc_type = 'word_counter',  body = document) 
    
 
 def collect(brand, count):
